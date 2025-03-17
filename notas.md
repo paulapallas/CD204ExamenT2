@@ -1,0 +1,1 @@
+Non me acordou facer o .gitignore o principio cos class 
