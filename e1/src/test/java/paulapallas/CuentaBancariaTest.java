@@ -26,6 +26,7 @@ public class CuentaBancariaTest {
         CuentaBancaria cuenta1 = new CuentaBancaria("Pepe", 1000);
 
         assertThrows(IllegalArgumentException.class, () -> cuenta1.depositar(0));
+       
     }
 
 
@@ -34,6 +35,7 @@ public class CuentaBancariaTest {
         CuentaBancaria cuenta1 = new CuentaBancaria("Pepe", 100);
 
         assertThrows(IllegalArgumentException.class, () -> cuenta1.retirar(130));
+        assertThrows(IllegalArgumentException.class, () -> cuenta1.retirar(-130));
     }
 
 
