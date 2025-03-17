@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 public class ArrayUtilsTest {
 
     int[] miArray = new int[] { 4, 1, 5, 2 };
+    int[] miArray2 = new int[] {};
     ArrayUtils array; // guarda el array miarray1 en operacionesArray
 
     @Before
@@ -20,6 +21,7 @@ public class ArrayUtilsTest {
     public void TestencontrarMaximo() {
 
         assertEquals(ArrayUtils.encontrarMaximo(miArray), 5);
+       
   
 
     }
@@ -30,6 +32,7 @@ public class ArrayUtilsTest {
     public void TestencontrarMinimo() {
 
         assertEquals(ArrayUtils.encontrarMinimo(miArray), 1);
+        
   
 
     }
@@ -44,16 +47,47 @@ public class ArrayUtilsTest {
 
     }
 
-    
+    @Test
+    void testExcepcionDivisionPorCero() {
+        assertThrows(IllegalArgumentException.class, () -> ArrayUtils.calcularPromedio(miArray2));
+    }
+
+    @Test
+    void testExcepcionMaximo() {
+        assertThrows(IllegalArgumentException.class, () -> ArrayUtils.encontrarMaximo(miArray2));
+    }
 
 
-    
-    
+    @Test
+    void testExcepcionMinimo() {
+        assertThrows(IllegalArgumentException.class, () -> ArrayUtils.encontrarMinimo(miArray2));
+    }
 
 
+    @Test
+    void testExcepcionPromedio() {
+        assertThrows(IllegalArgumentException.class, () -> ArrayUtils.calcularPromedio(miArray2));
+    }
 
 
 
 
 
 }
+
+
+
+
+    
+
+
+    
+    
+
+
+
+
+
+
+
+
