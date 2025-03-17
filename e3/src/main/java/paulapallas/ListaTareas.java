@@ -25,6 +25,11 @@ public class ListaTareas {
         }
     }
 
+
+    public void obtenerNumeroTareasPendientes(int indice) {
+        
+    }
+
    
 
     public String getTarea() {
