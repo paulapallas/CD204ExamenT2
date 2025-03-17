@@ -23,9 +23,9 @@ public class CuentaBancariaTest {
 
     @Test
     void testExcepcionCantidadCero() {
-        CuentaBancaria cuenta1 = new CuentaBancaria("Pepe", 0);
+        CuentaBancaria cuenta1 = new CuentaBancaria("Pepe", 1000);
 
-        assertThrows(ArithmeticException.class, () -> cuenta1.depositar(10));
+        assertThrows(IllegalArgumentException.class, () -> cuenta1.depositar(0));
     }
 
 
@@ -33,7 +33,7 @@ public class CuentaBancariaTest {
     void testExcepcionRetirarCantidad() {
         CuentaBancaria cuenta1 = new CuentaBancaria("Pepe", 100);
 
-        assertThrows(ArithmeticException.class, () -> cuenta1.retirar(30));
+        assertThrows(IllegalArgumentException.class, () -> cuenta1.retirar(130));
     }
 
 

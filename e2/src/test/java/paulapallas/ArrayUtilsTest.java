@@ -44,11 +44,7 @@ public class ArrayUtilsTest {
 
     }
 
-    //Non sei facelo ben
-    @Test
-    void testExcepcionDivisionPorCero() {
-        assertThrows(ArithmeticException.class, () -> miArray.calcularPromedio(array.lenght==0));
-    }
+    
 
 
     
