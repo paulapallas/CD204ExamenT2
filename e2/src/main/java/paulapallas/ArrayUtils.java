@@ -2,6 +2,10 @@
 package paulapallas;
 
 public class ArrayUtils {
+    public ArrayUtils(int[] miArray) {
+        
+    }
+
     public static int encontrarMaximo(int[] array) {
         if (array.length == 0) {
             throw new IllegalArgumentException("El array no puede estar vacío");
