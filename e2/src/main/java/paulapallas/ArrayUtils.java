@@ -1,3 +1,6 @@
+
+package paulapallas;
+
 public class ArrayUtils {
     public static int encontrarMaximo(int[] array) {
         if (array.length == 0) {

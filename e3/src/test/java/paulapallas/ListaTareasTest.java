@@ -1,3 +1,6 @@
+package paulapallas;
+
+
 public class ListaTareasTest {
 
     @Test
